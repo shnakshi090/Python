@@ -1,0 +1,35 @@
+Addition
+a = 10
+b = 5
+sum = a + b
+print(sum)  # Output: 15
+Subtraction
+a = 10
+b = 5
+difference = a - b
+print(difference)  # Output: 5
+Multipication
+a = 10
+b = 5
+product = a * b
+print(product)  # Output: 50
+Division
+a = 10
+b = 5
+quotient = a / b
+print(quotient)  # Output: 2.0
+Floor Division
+a = 10
+b = 3
+floor_div = a // b
+print(floor_div)  # Output: 3
+Modulus
+a = 10
+b = 3
+remainder = a % b
+print(remainder)  # Output: 1
+Exponentiation
+a = 2
+b = 3
+power = a ** b
+print(power)  # Output: 8
