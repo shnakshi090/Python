@@ -1,0 +1,1555 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyM4fuKu64T+o0lxCiyC3f4+",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/shnakshi090/Python/blob/main/list\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 19,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "R8Da_WaZO1IO",
+        "outputId": "a9706fb7-15eb-4a54-8597-f843013cc212"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "[1, 2, 3, 4]\n"
+          ]
+        }
+      ],
+      "source": [
+        "# Assign a list to an variable named my_list\n",
+        "my_list = [1,2,3,4]\n",
+        "\n",
+        "print(my_list)\n"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "type(my_list)\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "68rT6cq5Qm4E",
+        "outputId": "6f4b1994-6b00-40a8-866d-a468e5a785df"
+      },
+      "execution_count": 20,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "list"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 20
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "my_list = ['A string',23,100.232,'o',True]\n",
+        "\n",
+        "my_list"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "qefM49qhQqDa",
+        "outputId": "84f7d3f0-f325-425e-c787-a35ff4b89af3"
+      },
+      "execution_count": 21,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "['A string', 23, 100.232, 'o', True]"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 21
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "len(my_list)\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "ahDLTH03QqAA",
+        "outputId": "1d6fec66-0bb5-4970-f842-92434149c727"
+      },
+      "execution_count": 22,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "5"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 22
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# Consider a list of strings\n",
+        "loss_functions = ['Mean Absolute Error','Mean squared Error','Huber Loss','Log Loss','Hinge Loss']\n",
+        "print(loss_functions)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "8xWBERU3Qp9t",
+        "outputId": "b634cd9e-f10c-493f-964e-8242993cb1a5"
+      },
+      "execution_count": 23,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "['Mean Absolute Error', 'Mean squared Error', 'Huber Loss', 'Log Loss', 'Hinge Loss']\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#Grabs the element at index 0,whish is the FIRST element\n",
+        "print(loss_functions[0])\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "S4gP9dOfQp60",
+        "outputId": "f9433f48-4f69-4906-9dd1-c92b4bc4a819"
+      },
+      "execution_count": 24,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Mean Absolute Error\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "len(loss_functions)\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "gdGXFBvUQp4E",
+        "outputId": "910d842e-e8b8-43cc-b7f9-c06daef3f115"
+      },
+      "execution_count": 25,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "5"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 25
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# Grab the element at index 3, which is the FOURTH element\n",
+        "print(loss_functions[3])\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "Jtz9UgkBQp1L",
+        "outputId": "151c2677-a112-44c1-e4c7-88650926d56f"
+      },
+      "execution_count": 26,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Log Loss\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "print(loss_functions[6])\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 141
+        },
+        "id": "IXfQn_9rQpyo",
+        "outputId": "457ca687-f731-498f-eb41-bcfb123a4896"
+      },
+      "execution_count": 27,
+      "outputs": [
+        {
+          "output_type": "error",
+          "ename": "IndexError",
+          "evalue": "list index out of range",
+          "traceback": [
+            "\u001b[0;31m---------------------------------------------------------------------------\u001b[0m",
+            "\u001b[0;31mIndexError\u001b[0m                                Traceback (most recent call last)",
+            "\u001b[0;32m<ipython-input-27-36fa04b37479>\u001b[0m in \u001b[0;36m<cell line: 0>\u001b[0;34m()\u001b[0m\n\u001b[0;32m----> 1\u001b[0;31m \u001b[0mprint\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0mloss_functions\u001b[0m\u001b[0;34m[\u001b[0m\u001b[0;36m6\u001b[0m\u001b[0;34m]\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0m",
+            "\u001b[0;31mIndexError\u001b[0m: list index out of range"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# Grab the element at the index -1, which is the LAST element\n",
+        "print(loss_functions[-1]\n",
+        "      )"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "MuDxuvBJQpwP",
+        "outputId": "edb89913-ec79-478f-c77e-adc25ec51b5b"
+      },
+      "execution_count": 29,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Hinge Loss\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# Grab the element at index -3, which is the THIRD LAST element\n",
+        "print(loss_functions[-3])\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "aft-ketHQptj",
+        "outputId": "180aa86f-12e5-4a11-a5ba-f82895cfd39c"
+      },
+      "execution_count": 28,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Huber Loss\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# Print our list\n",
+        "print(loss_functions)\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "z2j6ewDoQprE",
+        "outputId": "4c6a19d8-ac39-4b16-c6a9-3aa6b4a5f8a0"
+      },
+      "execution_count": 30,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "['Mean Absolute Error', 'Mean squared Error', 'Huber Loss', 'Log Loss', 'Hinge Loss']\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# Grab the element starting from index 1 and everything past it\n",
+        "loss_functions[1:4]\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "jYVLZLLbQpoW",
+        "outputId": "c1f936e5-4d4d-4b90-8b25-2faf6f75559f"
+      },
+      "execution_count": 31,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "['Mean squared Error', 'Huber Loss', 'Log Loss']"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 31
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# Grab everything starting from index 2\n",
+        "loss_functions[2:]\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "HjDxtOJ9Qplu",
+        "outputId": "c1b73649-4d88-4f57-cc86-5b3424d94a9b"
+      },
+      "execution_count": 32,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "['Huber Loss', 'Log Loss', 'Hinge Loss']"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 32
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# Grab everything before the in dex 4\n",
+        "loss_functions[:4]\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "f5zI1iGoQpi8",
+        "outputId": "e77f806a-082a-4ae7-995a-0a6fda8446e8"
+      },
+      "execution_count": 33,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "['Mean Absolute Error', 'Mean squared Error', 'Huber Loss', 'Log Loss']"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 33
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# Grab everything\n",
+        "print(loss_functions[:])"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "yAZK8L1xQpgB",
+        "outputId": "7575fdcf-a1b5-4f12-ebf9-8c4aecb4a594"
+      },
+      "execution_count": 34,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "['Mean Absolute Error', 'Mean squared Error', 'Huber Loss', 'Log Loss', 'Hinge Loss']\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# Grab the LAST FOUR elements of list\n",
+        "loss_functions[-4:]\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "N9Xe-d09QpdY",
+        "outputId": "4b80fdb0-439f-4a06-f312-fe977f7774c0"
+      },
+      "execution_count": 35,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "['Mean squared Error', 'Huber Loss', 'Log Loss', 'Hinge Loss']"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 35
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "loss_functions[-10]\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 141
+        },
+        "id": "8GVljaGLQpax",
+        "outputId": "5080a825-c551-4738-eeeb-60fcbe76750f"
+      },
+      "execution_count": 36,
+      "outputs": [
+        {
+          "output_type": "error",
+          "ename": "IndexError",
+          "evalue": "list index out of range",
+          "traceback": [
+            "\u001b[0;31m---------------------------------------------------------------------------\u001b[0m",
+            "\u001b[0;31mIndexError\u001b[0m                                Traceback (most recent call last)",
+            "\u001b[0;32m<ipython-input-36-8a581720341d>\u001b[0m in \u001b[0;36m<cell line: 0>\u001b[0;34m()\u001b[0m\n\u001b[0;32m----> 1\u001b[0;31m \u001b[0mloss_functions\u001b[0m\u001b[0;34m[\u001b[0m\u001b[0;34m-\u001b[0m\u001b[0;36m10\u001b[0m\u001b[0;34m]\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0m",
+            "\u001b[0;31mIndexError\u001b[0m: list index out of range"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "len(loss_functions)\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "pL6jJSdeQpXv",
+        "outputId": "b6b08796-b5c3-4251-882c-057cf9aefe8b"
+      },
+      "execution_count": 37,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "5"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 37
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "loss_functions[8]\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 141
+        },
+        "id": "qBK_UPOtQpUp",
+        "outputId": "134938ed-918b-447d-f739-5c94f1adeb83"
+      },
+      "execution_count": 38,
+      "outputs": [
+        {
+          "output_type": "error",
+          "ename": "IndexError",
+          "evalue": "list index out of range",
+          "traceback": [
+            "\u001b[0;31m---------------------------------------------------------------------------\u001b[0m",
+            "\u001b[0;31mIndexError\u001b[0m                                Traceback (most recent call last)",
+            "\u001b[0;32m<ipython-input-38-4de3193e7629>\u001b[0m in \u001b[0;36m<cell line: 0>\u001b[0;34m()\u001b[0m\n\u001b[0;32m----> 1\u001b[0;31m \u001b[0mloss_functions\u001b[0m\u001b[0;34m[\u001b[0m\u001b[0;36m8\u001b[0m\u001b[0;34m]\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0m",
+            "\u001b[0;31mIndexError\u001b[0m: list index out of range"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "print(loss_functions)\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "aGsTljRQQpRq",
+        "outputId": "afd76186-b513-4524-8d01-6a3724db1915"
+      },
+      "execution_count": 39,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "['Mean Absolute Error', 'Mean squared Error', 'Huber Loss', 'Log Loss', 'Hinge Loss']\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "loss_functions + ['Kullback-leibler']\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "0uIq4kOaQpKp",
+        "outputId": "0b6731b0-43b9-4bf7-bd33-30544b885beb"
+      },
+      "execution_count": 40,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "['Mean Absolute Error',\n",
+              " 'Mean squared Error',\n",
+              " 'Huber Loss',\n",
+              " 'Log Loss',\n",
+              " 'Hinge Loss',\n",
+              " 'Kullback-leibler']"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 40
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "print(loss_functions)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "PXIeGHNTVmSI",
+        "outputId": "d920a908-4157-4729-abf5-c710c26e6041"
+      },
+      "execution_count": 41,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "['Mean Absolute Error', 'Mean squared Error', 'Huber Loss', 'Log Loss', 'Hinge Loss']\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# reassign\n",
+        "loss_functions = loss_functions + ['Kullback-leibler']\n",
+        "\n",
+        "print(loss_functions)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "NW5ZHlr5VmOx",
+        "outputId": "7dc27dc1-3115-42de-ab96-ff3294f1e545"
+      },
+      "execution_count": 42,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "['Mean Absolute Error', 'Mean squared Error', 'Huber Loss', 'Log Loss', 'Hinge Loss', 'Kullback-leibler']\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# Make the list double\n",
+        "len(loss_functions*5)\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "ONKBgqU9VmMa",
+        "outputId": "dbc02e46-d5fa-4db6-c1fb-194517845855"
+      },
+      "execution_count": 43,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "30"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 43
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "print(loss_functions)\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "9eT-nT6XVmKO",
+        "outputId": "417c2ee8-a632-4255-a667-eadd6e54c7a4"
+      },
+      "execution_count": 44,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "['Mean Absolute Error', 'Mean squared Error', 'Huber Loss', 'Log Loss', 'Hinge Loss', 'Kullback-leibler']\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "len(loss_functions)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "429CGQYvVmIF",
+        "outputId": "eac41b64-f034-4f81-ea43-3feb9a44fe42"
+      },
+      "execution_count": 45,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "6"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 45
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "new_list = [6,9,1,3,5.5]\n",
+        "\n",
+        "min(new_list)\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "DhIUo9X0VmFv",
+        "outputId": "ea15a34a-4d9c-40ef-bd2f-697c5132e49f"
+      },
+      "execution_count": 46,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "1"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 46
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "my_new_list = ['c' ,'b' ,'z' ,'y' ,'m']\n",
+        "min(my_new_list)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 35
+        },
+        "id": "KSpRxigyVmDC",
+        "outputId": "8dcd4122-dff1-48b9-c40d-c2af84dbc3eb"
+      },
+      "execution_count": 47,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "'b'"
+            ],
+            "application/vnd.google.colaboratory.intrinsic+json": {
+              "type": "string"
+            }
+          },
+          "metadata": {},
+          "execution_count": 47
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "new_list = [6,9,1,3,5.5]\n",
+        "\n",
+        "sum(new_list)\n",
+        "\n",
+        ""
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "1phLQyO7VmAx",
+        "outputId": "1524e6cf-df22-41aa-ea3b-b05fb02b629c"
+      },
+      "execution_count": 49,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "24.5"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 49
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "new_list"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "K2zx5FkHVl-b",
+        "outputId": "617918c8-cad5-47f4-a3f4-761a450915d5"
+      },
+      "execution_count": 50,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "[6, 9, 1, 3, 5.5]"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 50
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "sorted(new_list)\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "Kqmwt9fRVl8O",
+        "outputId": "41fef336-acf1-4187-97fd-61ec2484d8e8"
+      },
+      "execution_count": 51,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "[1, 3, 5.5, 6, 9]"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 51
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "print(new_list)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "fBMed3wGVl5x",
+        "outputId": "c3861f72-5ecf-44b6-db47-928de4663cd9"
+      },
+      "execution_count": 52,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "[6, 9, 1, 3, 5.5]\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "new_list = ['Argue','Burglar','Parent','Linear','shape']\n",
+        "\n",
+        "sorted(new_list)\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "pa6MVpmTVl3J",
+        "outputId": "5167bbe9-aa62-40e8-cb0e-10adf9224de4"
+      },
+      "execution_count": 53,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "['Argue', 'Burglar', 'Linear', 'Parent', 'shape']"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 53
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "print(new_list)\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "V8sVE4CzVl0h",
+        "outputId": "06fc3324-72e6-4703-818d-24cbff253020"
+      },
+      "execution_count": 54,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "['Argue', 'Burglar', 'Parent', 'Linear', 'shape']\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "sorted(new_list,reverse=True)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "0MyeClfOVlyI",
+        "outputId": "b7249191-fe59-4282-9cd2-0617ed988c04"
+      },
+      "execution_count": 55,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "['shape', 'Parent', 'Linear', 'Burglar', 'Argue']"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 55
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "sorted(new_list)\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "3tUaCPZOVluK",
+        "outputId": "c7a83274-6876-4cf2-e4b7-4254d6324568"
+      },
+      "execution_count": 56,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "['Argue', 'Burglar', 'Linear', 'Parent', 'shape']"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 56
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "new_list"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "MHrN8N5IVlrr",
+        "outputId": "442878b4-9f1e-4109-ef89-ce4f64f41e96"
+      },
+      "execution_count": 57,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "['Argue', 'Burglar', 'Parent', 'Linear', 'shape']"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 57
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# Create a new list\n",
+        "my_list = [1,2,3,1,1,1,3,10,5,8]\n",
+        "\n"
+      ],
+      "metadata": {
+        "id": "OObiOgvuVlpd"
+      },
+      "execution_count": 60,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# Print the list\n",
+        "my_list"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "W6dVYIg7Z3mn",
+        "outputId": "b9ebc452-5cb6-4124-86e5-db481e2cd2b8"
+      },
+      "execution_count": 61,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "[1, 2, 3, 1, 1, 1, 3, 10, 5, 8]"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 61
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "len(my_list)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "Xv9yv870VlnL",
+        "outputId": "c3a68c82-103a-4d05-d0f5-fbc57f4d9b06"
+      },
+      "execution_count": 62,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "10"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 62
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# Append to the end of list\n",
+        "my_list.append('Append me!')\n",
+        "\n",
+        "print(my_list)\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "BVJzrei-VlkX",
+        "outputId": "ce83e04a-28ee-48f6-cd39-a91241bc9fe3"
+      },
+      "execution_count": 63,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "[1, 2, 3, 1, 1, 1, 3, 10, 5, 8, 'Append me!']\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "len(my_list)\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "Bc4loXLVVlhw",
+        "outputId": "402fa3fd-d8a8-483d-8666-fd10d826ff4b"
+      },
+      "execution_count": 65,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "11"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 65
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# Show\n",
+        "my_list.append(2.73)\n",
+        "\n",
+        "\n",
+        "print(my_list)\n",
+        "len(my_list)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "o89OrWboVlbq",
+        "outputId": "6de65287-5d8b-4667-a2fa-260c693e5e87"
+      },
+      "execution_count": 67,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "[1, 2, 3, 1, 1, 1, 3, 10, 5, 8, 'Append me!', 2.73]\n"
+          ]
+        },
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "12"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 67
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "my_list.append([1,2,3])\n",
+        "\n",
+        "len(my_list)\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "lUgnlwpIbi-N",
+        "outputId": "9001f651-e136-4cc7-efd0-2fb9199fd3cc"
+      },
+      "execution_count": 69,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "13"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 69
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "my_list.append([10,[19,20],30])\n",
+        "\n",
+        "my_list"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "HCG4gTqobi66",
+        "outputId": "734ba792-cb2b-4122-ac92-789d5b344f1d"
+      },
+      "execution_count": 70,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "[1,\n",
+              " 2,\n",
+              " 3,\n",
+              " 1,\n",
+              " 1,\n",
+              " 1,\n",
+              " 3,\n",
+              " 10,\n",
+              " 5,\n",
+              " 8,\n",
+              " 'Append me!',\n",
+              " 2.73,\n",
+              " [1, 2, 3],\n",
+              " [10, [19, 20], 30]]"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 70
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# Print the list\n",
+        "print(my_list)\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "-9yDhnQEbikJ",
+        "outputId": "6afd2af0-c846-4bc7-ab8d-8d7812d460d9"
+      },
+      "execution_count": 71,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "[1, 2, 3, 1, 1, 1, 3, 10, 5, 8, 'Append me!', 2.73, [1, 2, 3], [10, [19, 20], 30]]\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "my_list.extend(['Wubbap','Lubbar','Dub Dub'])\n",
+        "\n",
+        "print(my_list)\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "lswYffA_cZU_",
+        "outputId": "609f529e-2d00-4f7f-e0c5-c3018a71fefb"
+      },
+      "execution_count": 74,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "[1, 2, 3, 1, 1, 1, 3, 10, 5, 8, 'Append me!', 2.73, [1, 2, 3], [10, [19, 20], 30], 'Wubbap', 'Lubbar', 'Dub Dub']\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "len(my_list)\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "HMXoyHVlcZRc",
+        "outputId": "a420c3f1-69ba-4abd-ac7f-4d247058b027"
+      },
+      "execution_count": 75,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "17"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 75
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# Pop off the 0 indexed item\n",
+        "my_list.pop()"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 35
+        },
+        "id": "-8C7He9UcZOi",
+        "outputId": "a23f9101-e64e-44c5-e44c-2a840bca92f1"
+      },
+      "execution_count": 80,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "'Dub Dub'"
+            ],
+            "application/vnd.google.colaboratory.intrinsic+json": {
+              "type": "string"
+            }
+          },
+          "metadata": {},
+          "execution_count": 80
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "print(my_list)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "J1Io7nLxcZLK",
+        "outputId": "ab8b4ea9-4a2f-43b6-af97-87c1be2ea39a"
+      },
+      "execution_count": 81,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "[1, 2, 3, 1, 1, 1, 3, 10, 5, 8, 'Append me!', 2.73, [1, 2, 3], [10, [19, 20], 30], 'Wubbap', 'Lubbar']\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# Assign the popped elements , remember default popped index is -1\n",
+        "my_list.pop(1)\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "pzq0Zv-DeC8a",
+        "outputId": "c57020a4-aee8-4f77-b4cd-71c043e0b089"
+      },
+      "execution_count": 82,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "2"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 82
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "len(my_list)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "4FPsSQDFeC5C",
+        "outputId": "83ab470d-1bb2-4257-f570-6f39cef42464"
+      },
+      "execution_count": 83,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "15"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 83
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "print(my_list)\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "NaNH6qk6eC2K",
+        "outputId": "c664703b-5a1f-427c-a09d-6a8ffd50a1bb"
+      },
+      "execution_count": 84,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "[1, 3, 1, 1, 1, 3, 10, 5, 8, 'Append me!', 2.73, [1, 2, 3], [10, [19, 20], 30], 'Wubbap', 'Lubbar']\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# Print the list\n",
+        "print(my_list)\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "4ksZM1bHeCzf",
+        "outputId": "d008b0ef-5eeb-4cd3-99aa-eb0b6381d5d1"
+      },
+      "execution_count": 85,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "[1, 3, 1, 1, 1, 3, 10, 5, 8, 'Append me!', 2.73, [1, 2, 3], [10, [19, 20], 30], 'Wubbap', 'Lubbar']\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#Remove the element which you  want to\n",
+        "my_list.remove([10,[19,20],30])\n",
+        "\n",
+        "# Show\n",
+        "print(my_list)\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "tSYliqiJeCwx",
+        "outputId": "e088ad90-4ec4-46a2-e62b-629df3397284"
+      },
+      "execution_count": 86,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "[1, 3, 1, 1, 1, 3, 10, 5, 8, 'Append me!', 2.73, [1, 2, 3], 'Wubbap', 'Lubbar']\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "my_list.remove([1,2,3])\n",
+        "\n",
+        "\n",
+        "print(my_list)\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "0xhIf9vReCp5",
+        "outputId": "09cc6222-a990-4e32-f9bd-066033be7d12"
+      },
+      "execution_count": 87,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "[1, 3, 1, 1, 1, 3, 10, 5, 8, 'Append me!', 2.73, 'Wubbap', 'Lubbar']\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "len(my_list)\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "g_A53513fmXL",
+        "outputId": "dc9caee3-0568-45e6-950b-8f496a6fd130"
+      },
+      "execution_count": 88,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "13"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 88
+        }
+      ]
+    }
+  ]
+}
