@@ -1,0 +1,962 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyPREZOyeaDBfQo+lL8dB2Yl",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/shnakshi090/Python/blob/main/comprehension\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 1,
+      "metadata": {
+        "id": "lSSzvQgSz16X"
+      },
+      "outputs": [],
+      "source": [
+        "#The list of numbers\n",
+        "list_of_numbers=[1,2,4,6,11,14,17,20]\n",
+        ""
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#Let us first initialize a list where we will be appending the squares in each iteration\n",
+        "squared_numbers=[1,2,4,6,11,14,17,20]\n",
+        "print(squared_numbers)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "PGycqMJw0Koo",
+        "outputId": "d1d6b839-5bcc-4862-f3cc-39680c7cf1ec"
+      },
+      "execution_count": 2,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "[1, 2, 4, 6, 11, 14, 17, 20]\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "print(f\"The list of squared numbers is {squared_numbers}\")"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "r-FO8SYs0KlU",
+        "outputId": "7767219e-cbd8-4d49-aa89-5d0713bb6c40"
+      },
+      "execution_count": 3,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "The list of squared numbers is [1, 2, 4, 6, 11, 14, 17, 20]\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#Getting the list of squares using list comprehension\n",
+        "list_of_numbers=[1,2,4,6,11,14,17,20]\n",
+        "squared_numbers=[number**2 for number in list_of_numbers]\n",
+        "print(squared_numbers)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "Ad28USO60Ki1",
+        "outputId": "0abcf1af-d6ce-4595-c2bb-ef1fd58f2186"
+      },
+      "execution_count": 4,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "[1, 4, 16, 36, 121, 196, 289, 400]\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "print(list_of_numbers)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "KxSm99J80KgS",
+        "outputId": "0ce46530-80ec-41b8-d4ba-bcd5bfaec396"
+      },
+      "execution_count": 5,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "[1, 2, 4, 6, 11, 14, 17, 20]\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#Writing list comprehension using conditionals\n",
+        "even_squared_numbers=[number**2 for number in list_of_numbers if number%2==0]\n",
+        "print(even_squared_numbers)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "hC0FFmWL0Kde",
+        "outputId": "97b8005c-c436-452e-91a8-151deebb729b"
+      },
+      "execution_count": 6,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "[4, 16, 36, 196, 400]\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#Writing list comprehension using conditionals\n",
+        "odd_squared_numbers=[number**2 for number in list_of_numbers if number%2!=0]\n",
+        "print(odd_squared_numbers)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "ZwL42Pzz0KYP",
+        "outputId": "e9121d61-4426-40f2-b931-faa162ccbdd0"
+      },
+      "execution_count": 7,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "[1, 121, 289]\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#Writing list comprehension using conditionals\n",
+        "even_squared_numbers=[number**2 for number in list_of_numbers if number%2==0]\n",
+        "print(even_squared_numbers)\n",
+        ""
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "TZLObKIk0KVs",
+        "outputId": "e385afad-873c-4aaa-8d2d-b5b8c0211430"
+      },
+      "execution_count": 8,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "[4, 16, 36, 196, 400]\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#Writing list comprehension using conditionals\n",
+        "odd_squared_numbers = [number**2 if number%2!=0 else number**3 for number in list_of_numbers]\n",
+        "print(odd_squared_numbers)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "A4IOYaqA0utR",
+        "outputId": "4748a15e-1a7d-46d9-c98b-b4da77fe2e8e"
+      },
+      "execution_count": 9,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "[1, 8, 64, 216, 121, 2744, 289, 8000]\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "even_squared_numbers=[number**2 for number in list_of_numbers if number%2==0]"
+      ],
+      "metadata": {
+        "id": "GEwtwhUI0urX"
+      },
+      "execution_count": 10,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "list(range(4))"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "t1zT4WDk0uo3",
+        "outputId": "a6eeb456-97f7-49bc-862e-4eaf7426180b"
+      },
+      "execution_count": 11,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "[0, 1, 2, 3]"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 11
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "list_of_numbers=[]\n",
+        "for num1 in range(4):\n",
+        "  for num2 in range(3):\n",
+        "    print(num1,num2)\n",
+        "    list_of_numbers.append(num2)\n",
+        "    print(list_of_numbers)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "1LV3Mi8v0umT",
+        "outputId": "e50e0765-89aa-4543-f2ef-b4fbc16aa94b"
+      },
+      "execution_count": 12,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "0 0\n",
+            "[0]\n",
+            "0 1\n",
+            "[0, 1]\n",
+            "0 2\n",
+            "[0, 1, 2]\n",
+            "1 0\n",
+            "[0, 1, 2, 0]\n",
+            "1 1\n",
+            "[0, 1, 2, 0, 1]\n",
+            "1 2\n",
+            "[0, 1, 2, 0, 1, 2]\n",
+            "2 0\n",
+            "[0, 1, 2, 0, 1, 2, 0]\n",
+            "2 1\n",
+            "[0, 1, 2, 0, 1, 2, 0, 1]\n",
+            "2 2\n",
+            "[0, 1, 2, 0, 1, 2, 0, 1, 2]\n",
+            "3 0\n",
+            "[0, 1, 2, 0, 1, 2, 0, 1, 2, 0]\n",
+            "3 1\n",
+            "[0, 1, 2, 0, 1, 2, 0, 1, 2, 0, 1]\n",
+            "3 2\n",
+            "[0, 1, 2, 0, 1, 2, 0, 1, 2, 0, 1, 2]\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#We can write it in a slightly different way\n",
+        "list_of_numbers= [num2 for num1 in range(4) for num2 in range(3)]\n",
+        "print(list_of_numbers)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "LrtAdTsk0uj0",
+        "outputId": "a90feaa9-a7e9-42be-fab2-d93a0573223d"
+      },
+      "execution_count": 13,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "[0, 1, 2, 0, 1, 2, 0, 1, 2, 0, 1, 2]\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "list_of_numbers=[num2**2 for num2 in range(3) for num1 in range(4)]\n",
+        "print(list_of_numbers)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "tGiC6uzy0uhO",
+        "outputId": "5b41bd89-fbfa-4a5e-8732-dd8024bc685e"
+      },
+      "execution_count": 14,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "[0, 0, 0, 0, 1, 1, 1, 1, 4, 4, 4, 4]\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "sample=[[]]\n",
+        "len(sample)\n",
+        "sample[0]"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "w_uOrLM90uet",
+        "outputId": "f0552e7a-3d5f-4278-e41d-de1d828e4f6b"
+      },
+      "execution_count": 15,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "[]"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 15
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "list_of_lists=[1]\n",
+        "#for num1 in range(4):\n",
+        "#Append an empty sublist inside the list\n",
+        "list_of_lists.append([]) #[[0]] , list_of_lists[1]\n",
+        "#print(list_of_lists"
+      ],
+      "metadata": {
+        "id": "CdJfKjKx0ucF"
+      },
+      "execution_count": 16,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "list_of_lists=[]\n",
+        "#for num1 in range(4):\n",
+        "#Append an empty sublist inside the list\n",
+        "list_of_lists.append([]) #[[0]] , list_of_lists[1]\n",
+        "#print(list_of_lists)\n",
+        ""
+      ],
+      "metadata": {
+        "id": "siaj4KMC0uZW"
+      },
+      "execution_count": 19,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "for num2 in range(3):\n",
+        "#Append the elements within the sublist\n",
+        "list_of_lists[num1].append(num2) #list_of_lists[0]\n",
+        "print(list_of_lists)\n",
+        "\n",
+        "[[0, 0, 0], [1, 1, 1], [2, 2, 2], [3, 3, 3, 2]]"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 106
+        },
+        "id": "W_JW56n81fOe",
+        "outputId": "fa64d247-ab5f-442d-e4d3-9d39b11c0472"
+      },
+      "execution_count": 20,
+      "outputs": [
+        {
+          "output_type": "error",
+          "ename": "IndentationError",
+          "evalue": "expected an indented block after 'for' statement on line 1 (<ipython-input-20-5bba86600490>, line 3)",
+          "traceback": [
+            "\u001b[0;36m  File \u001b[0;32m\"<ipython-input-20-5bba86600490>\"\u001b[0;36m, line \u001b[0;32m3\u001b[0m\n\u001b[0;31m    list_of_lists[num1].append(num2) #list_of_lists[0]\u001b[0m\n\u001b[0m    ^\u001b[0m\n\u001b[0;31mIndentationError\u001b[0m\u001b[0;31m:\u001b[0m expected an indented block after 'for' statement on line 1\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#Using list comprehension we can write the same thing\n",
+        "list_of_lists=[[num1 for num2 in range(3)] for num1 in range(4)]\n",
+        "print(list_of_lists)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "_y_y7DMx1fWL",
+        "outputId": "783ee179-98e0-4d51-e323-4e7c6c1725a0"
+      },
+      "execution_count": 21,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "[[0, 0, 0], [1, 1, 1], [2, 2, 2], [3, 3, 3]]\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "heisenberg_quote= \"It ceases to exist without me. No,you clearly don't know who you're talkingto, so let me clue you in. I am not in danger,Skyler. I am the danger\"\n",
+        "words_by_walter = heisenberg_quote.split(' ')\n",
+        "print(words_by_walter)\n",
+        "\n",
+        "['It', 'ceases', 'to', 'exist', 'without', 'me.', 'No,you', 'clearly', \"don't\", 'know', 'who', \"you're\", 'talkingto,', 'so', 'let', 'me', 'clue', 'you', 'in.', 'I', 'am', 'not', 'in', 'danger,Skyler.', 'I', 'am', 'the', 'danger']\n",
+        ""
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "uHBYQJ6x1fez",
+        "outputId": "126ebb9f-4b78-49a6-9d18-29fda0b9df23"
+      },
+      "execution_count": 22,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "['It', 'ceases', 'to', 'exist', 'without', 'me.', 'No,you', 'clearly', \"don't\", 'know', 'who', \"you're\", 'talkingto,', 'so', 'let', 'me', 'clue', 'you', 'in.', 'I', 'am', 'not', 'in', 'danger,Skyler.', 'I', 'am', 'the', 'danger']\n"
+          ]
+        },
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "['It',\n",
+              " 'ceases',\n",
+              " 'to',\n",
+              " 'exist',\n",
+              " 'without',\n",
+              " 'me.',\n",
+              " 'No,you',\n",
+              " 'clearly',\n",
+              " \"don't\",\n",
+              " 'know',\n",
+              " 'who',\n",
+              " \"you're\",\n",
+              " 'talkingto,',\n",
+              " 'so',\n",
+              " 'let',\n",
+              " 'me',\n",
+              " 'clue',\n",
+              " 'you',\n",
+              " 'in.',\n",
+              " 'I',\n",
+              " 'am',\n",
+              " 'not',\n",
+              " 'in',\n",
+              " 'danger,Skyler.',\n",
+              " 'I',\n",
+              " 'am',\n",
+              " 'the',\n",
+              " 'danger']"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 22
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "heisenberg_quote.split('t')"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "eJYlUEKJ1fnW",
+        "outputId": "0537f1af-7133-43f8-afc8-0041b3103c2d"
+      },
+      "execution_count": 24,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "['I',\n",
+              " ' ceases ',\n",
+              " 'o exis',\n",
+              " ' wi',\n",
+              " 'hou',\n",
+              " \" me. No,you clearly don'\",\n",
+              " \" know who you're \",\n",
+              " 'alking',\n",
+              " 'o, so le',\n",
+              " ' me clue you in. I am no',\n",
+              " ' in danger,Skyler. I am ',\n",
+              " 'he danger']"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 24
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#Let's you store the first time of each word in another list\n",
+        "first_letters = []\n",
+        "for word in words_by_walter:\n",
+        "  first_letters.append(word[0])"
+      ],
+      "metadata": {
+        "id": "V_3dlPZI1fvR"
+      },
+      "execution_count": 25,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#Print the first_letters list\n",
+        "print(first_letters)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "TFWJL77r1f3O",
+        "outputId": "f83ffeec-3a59-443e-b393-e13d3ef01b6b"
+      },
+      "execution_count": 26,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "['I', 'c', 't', 'e', 'w', 'm', 'N', 'c', 'd', 'k', 'w', 'y', 't', 's', 'l', 'm', 'c', 'y', 'i', 'I', 'a', 'n', 'i', 'd', 'I', 'a', 't', 'd']\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#The same task but now with list comprehension\n",
+        "first_letters=[word[0] for word in words_by_walter]\n",
+        "print(first_letters)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "VmdalqAU1f_8",
+        "outputId": "85cdfd5c-90c8-47d7-dab4-ff4bd83903d0"
+      },
+      "execution_count": 27,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "['I', 'c', 't', 'e', 'w', 'm', 'N', 'c', 'd', 'k', 'w', 'y', 't', 's', 'l', 'm', 'c', 'y', 'i', 'I', 'a', 'n', 'i', 'd', 'I', 'a', 't', 'd']\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "heisenberg_quote.split(',')"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "gWVGLdmH2Ki9",
+        "outputId": "54c89dbe-aa34-4016-a5c6-5976fd0d3099"
+      },
+      "execution_count": 28,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "['It ceases to exist without me. No',\n",
+              " \"you clearly don't know who you're talkingto\",\n",
+              " ' so let me clue you in. I am not in danger',\n",
+              " 'Skyler. I am the danger']"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 28
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "my_string='Alphsbet Inc.'\n",
+        "list_of_characters= [char for char in my_string]\n",
+        "print(list_of_characters)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "4UPt2TNt2Kff",
+        "outputId": "c562beb3-e3a8-47ad-cd7d-9c87c898b842"
+      },
+      "execution_count": 29,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "['A', 'l', 'p', 'h', 's', 'b', 'e', 't', ' ', 'I', 'n', 'c', '.']\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#Suppose we have a tuple of days\n",
+        "days = ('Monday','Tuesday','Wednesday','Thursday','Friday','Saturday','Sunday')\n",
+        "tuple(day for day in days)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "sGnUuTJi2KdJ",
+        "outputId": "f5105e3b-0586-49d8-a187-7f7cedf797e4"
+      },
+      "execution_count": 30,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "('Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday')"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 30
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#Let us create a tuple where we want to remove the word 'day' from each tuple element\n",
+        "days_without_day = tuple([day[:-3] for day in days])\n",
+        "print(days_without_day)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "goIgmsoB2KbG",
+        "outputId": "a7a04927-4d5e-4ecd-cc50-8b0089dabe7f"
+      },
+      "execution_count": 31,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "('Mon', 'Tues', 'Wednes', 'Thurs', 'Fri', 'Satur', 'Sun')\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "Using set comprehension\n",
+        "first_letters = {word[0] for word in words_by_walter}\n",
+        "print(first_letters)\n",
+        "\n",
+        "{'s', 'w', 'y', 'm', 't', 'd', 'i', 'c', 'e', 'I', 'N', 'l', 'a', 'n', 'k'}"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 106
+        },
+        "id": "9C3Cwl0E2KYa",
+        "outputId": "64f4a0b2-716a-4c6a-825c-49dd42929585"
+      },
+      "execution_count": 37,
+      "outputs": [
+        {
+          "output_type": "error",
+          "ename": "SyntaxError",
+          "evalue": "invalid syntax (<ipython-input-37-fb45f4529c7a>, line 1)",
+          "traceback": [
+            "\u001b[0;36m  File \u001b[0;32m\"<ipython-input-37-fb45f4529c7a>\"\u001b[0;36m, line \u001b[0;32m1\u001b[0m\n\u001b[0;31m    Using set comprehension\u001b[0m\n\u001b[0m          ^\u001b[0m\n\u001b[0;31mSyntaxError\u001b[0m\u001b[0;31m:\u001b[0m invalid syntax\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#Dictionary comprehensions\n",
+        "country_city_list = [('India','New Delhi'), ('Australia','Canberra'), ('United States' ,'Washington DC'),('England','London')]"
+      ],
+      "metadata": {
+        "id": "EjUHqLbf2KVq"
+      },
+      "execution_count": 38,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#lets convert the list of tuples to a dictionary\n",
+        "country_city_dict = dict(country_city_list)\n",
+        "print(country_city_dict)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "HL77XWgP2KTB",
+        "outputId": "72eaf7e4-74a0-4840-c7d9-0b82dbc50bca"
+      },
+      "execution_count": 39,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "{'India': 'New Delhi', 'Australia': 'Canberra', 'United States': 'Washington DC', 'England': 'London'}\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#The conventional for loop approach\n",
+        "flipped = {}\n",
+        "for country, city in country_city_dict.items():\n",
+        "  flipped[city] = country\n",
+        "\n",
+        "print(flipped)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "CdrEjGXM2KQU",
+        "outputId": "c13bc30f-0b6a-4f45-bbf3-2eadcdaeb60a"
+      },
+      "execution_count": 40,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "{'New Delhi': 'India', 'Canberra': 'Australia', 'Washington DC': 'United States', 'London': 'England'}\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#The new dictionary comprehension\n",
+        "\n",
+        "flipped = {city:country for country,city in country_city_dict.items()}\n",
+        "print(flipped)\n",
+        ""
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "H2giKgn72KNw",
+        "outputId": "8834edbf-9898-4371-91ea-6051bfb62aa9"
+      },
+      "execution_count": 41,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "{'New Delhi': 'India', 'Canberra': 'Australia', 'Washington DC': 'United States', 'London': 'England'}\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#We can add further conditionals\n",
+        "\n",
+        "flipped = {city:country for country,city in country_city_dict.items() if country[0] in ['E','A']}\n",
+        "print(flipped)\n",
+        ""
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "5J4QiPnG2KLP",
+        "outputId": "d280e448-1368-49ad-dc60-e7dd22a1a11b"
+      },
+      "execution_count": 42,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "{'Canberra': 'Australia', 'London': 'England'}\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#The new dictionary comprehensions\n",
+        "\n",
+        "flipped = {country[:2] : city[-2:]for country,city in country_city_dict.items()}\n",
+        "print(flipped)\n",
+        ""
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "ELuxW8772720",
+        "outputId": "06572313-32a9-4da8-9e43-75a96211f1be"
+      },
+      "execution_count": 43,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "{'In': 'hi', 'Au': 'ra', 'Un': 'DC', 'En': 'on'}\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "print(country_city_dict)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "XQziQowL27-y",
+        "outputId": "79f421f3-9e79-46b9-ef89-22aaf10996c3"
+      },
+      "execution_count": 44,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "{'India': 'New Delhi', 'Australia': 'Canberra', 'United States': 'Washington DC', 'England': 'London'}\n"
+          ]
+        }
+      ]
+    }
+  ]
+}
