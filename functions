@@ -1,0 +1,467 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyPhi3lHUkoTYKuVjUggP1yf",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/shnakshi090/Python/blob/main/functions\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 1,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "8pPCc9w_4xeU",
+        "outputId": "aad3c5ff-a524-4deb-97ea-f9433fadabbe"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "['I', 'c', 't', 'e', 'w', 'm', 'N', 'y', 'c', 'd', 'k', 'w', 'y', 't', 't', 's', 'l', 'm', 'c', 'y', 'i', 'I', 'a', 'n', 'i', 'd']\n"
+          ]
+        }
+      ],
+      "source": [
+        "heisenberg_quote = \"It creates to exist without me. No, you clearly don't know who you're talking to, so let me clue you in. I am not in danger.\"\n",
+        "\n",
+        "words_by_walter = heisenberg_quote.split(' ')\n",
+        "\n",
+        "first_letters = [word[0] for word in words_by_walter]\n",
+        "print(first_letters)"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "def extract_first_letters(sentence):\n",
+        "  words_in_sentence = sentence.split(' ')\n",
+        "  first_letters = [word[0] for word in words_in_sentence]\n",
+        "  return first_letters\n",
+        "  print(extract_first_letters(heisenberg_quote))\n",
+        ""
+      ],
+      "metadata": {
+        "id": "Sn8rW6Au40ay"
+      },
+      "execution_count": 2,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#Function for calculating factorial of a number\n",
+        "def factorial(num):\n",
+        "  result = 1\n",
+        "  if num < 0:\n",
+        "    print(\"factorial is not defined for negative numbers\")\n",
+        "  elif (num> 0):\n",
+        "    for i in range(1, num+1):\n",
+        "            result = result * i\n",
+        "    print(f\"the factorial of {num} is {result}\")\n",
+        "  else:\n",
+        "              result = 1\n",
+        "              print('factorial of 0 is ',result)\n",
+        "\n",
+        "factorial(5)\n",
+        ""
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "1lMF-_Fw40Xe",
+        "outputId": "36cfe033-52a3-4af0-8473-4235d586b68b"
+      },
+      "execution_count": 3,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "the factorial of 5 is 120\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#Now let us define a list of numbers for which we want to calculate the factorials\n",
+        "list_of_numbers = [1,2,3,4,5,6,7]"
+      ],
+      "metadata": {
+        "id": "A444rE-140U6"
+      },
+      "execution_count": 20,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#We can write a list comprehension for the same task\n",
+        "list_of_numbers = [1,2,3,4,5,6,7]\n",
+        "factorial_list = [factorial(number) for number in list_of_numbers if number%2!=0]\n",
+        "print(factorial_list)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "TDaiPAhw40Sd",
+        "outputId": "f04a10f1-2707-41ff-81d2-0e03d0fd4266"
+      },
+      "execution_count": 5,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "the factorial of 1 is 1\n",
+            "the factorial of 3 is 6\n",
+            "the factorial of 5 is 120\n",
+            "the factorial of 7 is 5040\n",
+            "[None, None, None, None]\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "def assignQuarter(user_date):\n",
+        "  date_year = user_date[:4]\n",
+        "  date_month = user_date[5:7]\n",
+        "\n",
+        "  if (date_month >= '01') & (date_month <= '03'):\n",
+        "    quarter = date_year + '-Q1'\n",
+        "  elif (date_month >= '04') & (date_month <='06'):\n",
+        "      quarter = date_year + '-Q2'\n",
+        "  elif (date_month >= '07') & (date_month <= '09'):\n",
+        "    quarter = date_year + '-Q3'\n",
+        "  else:\n",
+        "    quarter = date_year + '-Q4'\n",
+        "  return quarter"
+      ],
+      "metadata": {
+        "id": "7JnC4LdJ40Pw"
+      },
+      "execution_count": 22,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "sample_date = '2020-07-01'\n",
+        "date_quarter = assignQuarter(sample_date)\n",
+        "print(date_quarter)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "lQh75fV640NQ",
+        "outputId": "c360ee28-04d3-4ceb-ca3e-636c5c9bfd44"
+      },
+      "execution_count": 7,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "2020-Q3\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "my_quarter = assignQuarter('2020-07-01')\n",
+        "print(my_quarter)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "nOp90mJZ40Ks",
+        "outputId": "fbb350a7-7d07-4fbb-9fe8-a21edb25361b"
+      },
+      "execution_count": 8,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "2020-Q3\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#Functoin with multiple return statements\n",
+        "def check_even_or_odd(num):\n",
+        "  print(f\"given number is {num}\")\n",
+        "\n",
+        "  if num%2 ==0:\n",
+        "    return 'even'\n",
+        "  return 'odd'\n",
+        "\n",
+        "is_even_odd = check_even_or_odd(10)\n",
+        "print(is_even_odd)\n",
+        ""
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "JJy6RmiE40IK",
+        "outputId": "86f08129-c6e6-49d3-fea4-f3c822a2a7ea"
+      },
+      "execution_count": 9,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "given number is 10\n",
+            "even\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#Function which adds an element to list\n",
+        "def list_append(my_list, elem):\n",
+        "  new_list = my_list + [elem]\n",
+        "  return new_list"
+      ],
+      "metadata": {
+        "id": "8o8MFMb540Fe"
+      },
+      "execution_count": 23,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "heights = [150,160,170,180,190,200]\n",
+        "list_append(heights, 190)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "hAIhR_8_5akj",
+        "outputId": "ba431977-e54a-43b5-c3d9-3f1c9ed8abe8"
+      },
+      "execution_count": 11,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "[150, 160, 170, 180, 190, 200, 190]"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 11
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "list_append(heights, elem = 40)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "PpasFDE45ahP",
+        "outputId": "0ab0dbda-83e3-425e-ae42-2d33c9f847bb"
+      },
+      "execution_count": 12,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "[150, 160, 170, 180, 190, 200, 40]"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 12
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "heights.append(60)"
+      ],
+      "metadata": {
+        "id": "4xJSR6gu5aeq"
+      },
+      "execution_count": 24,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "print(heights)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "iDXdT2QX5acR",
+        "outputId": "64f0adc4-7f31-4a21-950d-6ab46ab70be6"
+      },
+      "execution_count": 14,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "[150, 160, 170, 180, 190, 200, 60]\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#Scope\n",
+        "def experiment():\n",
+        "  global x\n",
+        "  x = 50\n",
+        "  return x"
+      ],
+      "metadata": {
+        "id": "fthjQsTK5aZq"
+      },
+      "execution_count": 15,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "experiment()"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "rBLTQd6B6Ze1",
+        "outputId": "f398475b-9261-44aa-909e-5c20c0e10b99"
+      },
+      "execution_count": 16,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "50"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 16
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "def new_experiment():\n",
+        "  x = 50\n",
+        "  return x\n",
+        "x = 40"
+      ],
+      "metadata": {
+        "id": "KLXM4fEG6Zbd"
+      },
+      "execution_count": 25,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "new_experiment()"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "eHrNk5mF6ZY1",
+        "outputId": "ffd8d4f9-861f-4b8b-84ab-c780a857e8fe"
+      },
+      "execution_count": 18,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "50"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 18
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "x"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "u_WmCpZ-6ZWW",
+        "outputId": "3dba777d-e344-4989-eb0e-ef3146fea306"
+      },
+      "execution_count": 19,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "40"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 19
+        }
+      ]
+    }
+  ]
+}
