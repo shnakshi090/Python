@@ -1,0 +1,813 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyNZHFrOjyYqDUb2zUCIuxez",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/shnakshi090/Python/blob/main/oops_exception\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 1,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "16JAo8kZpD4b",
+        "outputId": "aaae74a8-6f45-427d-a317-eb76357eb5a6"
+      },
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "[]"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 1
+        }
+      ],
+      "source": [
+        "empty_list = []\n",
+        "empty_list\n",
+        ""
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "another_empty_list = list()\n",
+        "another_empty_list\n",
+        ""
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "FapUBW17p88h",
+        "outputId": "1401641d-1621-4694-888f-da135ed69c10"
+      },
+      "execution_count": 2,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "[]"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 2
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "another_empty_list.append(2)\n",
+        "another_empty_list\n",
+        ""
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "3_ePCNBhp85A",
+        "outputId": "65cc86cd-97bf-4773-9d8d-a54c4b2a6157"
+      },
+      "execution_count": 3,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "[2]"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 3
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "another_empty_list.append(1)\n",
+        "another_empty_list.append(3)\n",
+        "another_empty_list"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "UT4vXUzop82X",
+        "outputId": "56cb5c19-2ab4-472f-d15c-2642d8550bf8"
+      },
+      "execution_count": 4,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "[2, 1, 3]"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 4
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "another_empty_list.index(3)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "4cyXRyGup8zf",
+        "outputId": "91000208-0f30-44a9-b3f1-0775638cdc7d"
+      },
+      "execution_count": 5,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "2"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 5
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "the_sixth_sense = 6\n",
+        "print(type(the_sixth_sense))"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "dfoo425ip8w4",
+        "outputId": "abe98fd6-aa93-4c23-ccca-8f2d74331efc"
+      },
+      "execution_count": 6,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "<class 'int'>\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "two_and_a_half_men = 2.5\n",
+        "print(type(two_and_a_half_men))\n",
+        ""
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "lqBCzw_ap8t7",
+        "outputId": "c29e1d29-aab6-4dcc-f3e3-210e73515f3b"
+      },
+      "execution_count": 7,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "<class 'float'>\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "another_list = list()\n",
+        "tharoor = {'farrago': 'a confused mixture'}\n",
+        "print(type(tharoor))"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "ydUv1vZJp8rb",
+        "outputId": "0526975a-24b4-4fd1-8417-45081fb66c7a"
+      },
+      "execution_count": 8,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "<class 'dict'>\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "schindlers_list = list()\n",
+        "print(type(schindlers_list))\n",
+        ""
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "f8DEwY6yp8oo",
+        "outputId": "67d58c62-7b23-456a-bc77-72960e2bb6f6"
+      },
+      "execution_count": 9,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "<class 'list'>\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "another_list = list()\n",
+        "tharoor = {'farrago': 'a confused mixture'}\n",
+        "print(type(tharoor))"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "AzRv0yXxp8l-",
+        "outputId": "10dd0d5e-4475-4ce6-b29b-ab88724eccd8"
+      },
+      "execution_count": 10,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "<class 'dict'>\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#Create a new object type called FirstClass\n",
+        "class FirstClass:\n",
+        "  pass\n",
+        ""
+      ],
+      "metadata": {
+        "id": "co6-iShcqoVq"
+      },
+      "execution_count": 11,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#Instance of FirstClass\n",
+        "x = FirstClass()\n",
+        "print(type(x))"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "AM9v15A-qoSS",
+        "outputId": "04ccb495-b5a7-4eeb-a0ba-e6f7319c490c"
+      },
+      "execution_count": 12,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "<class '__main__.FirstClass'>\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "y = FirstClass()\n",
+        "print(type(y))"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "dIpkgujGqoP0",
+        "outputId": "2a9ca07d-86fb-42ff-dc95-e88e5ae46835"
+      },
+      "execution_count": 13,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "<class '__main__.FirstClass'>\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#Attributes\n",
+        "class Dog:\n",
+        "  def __init__(self, breed, name):\n",
+        "    self.breed_attribute = breed\n",
+        "    self.name_attribute = name"
+      ],
+      "metadata": {
+        "id": "Qzk5qSR8qoNa"
+      },
+      "execution_count": 31,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "sam_object = Dog(breed='Lab', name='Sam')\n",
+        "frank_object = Dog(breed='Huskie', name='Frank')"
+      ],
+      "metadata": {
+        "id": "6g5A87lPqoK3"
+      },
+      "execution_count": 15,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "sam_object.breed_attribute"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 36
+        },
+        "id": "wlcfzT7LqoIT",
+        "outputId": "de83437d-194e-4756-c950-8b914cd97e37"
+      },
+      "execution_count": 16,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "'Lab'"
+            ],
+            "application/vnd.google.colaboratory.intrinsic+json": {
+              "type": "string"
+            }
+          },
+          "metadata": {},
+          "execution_count": 16
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "frank_object.name_attribute"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 36
+        },
+        "id": "65bzK9X5qoFZ",
+        "outputId": "7b814752-38cd-40dc-867e-a65c38a74618"
+      },
+      "execution_count": 17,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "'Frank'"
+            ],
+            "application/vnd.google.colaboratory.intrinsic+json": {
+              "type": "string"
+            }
+          },
+          "metadata": {},
+          "execution_count": 17
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#Circle class\n",
+        "class Circle:\n",
+        "  def __init__(self, radius = 1):\n",
+        "    self.radius = radius\n",
+        "    self.area = 3.14 * radius * radius\n",
+        "\n",
+        "  def setRadius(self, new_radius):\n",
+        "      self.radius = new_radius\n",
+        "      self.area = 3.14 * new_radius * new_radius\n",
+        "\n",
+        "  def getCircumference(self):\n",
+        "      return 2 * 3.14 * self.radius\n",
+        "\n",
+        "c = Circle(2)\n",
+        "c.area"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "dJJxTLbQrDiO",
+        "outputId": "09ab9abc-8618-47c4-da47-6273fe3d3cef"
+      },
+      "execution_count": 18,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "12.56"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 18
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "c.setRadius(10)\n",
+        "print(c.getCircumference())"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "Ddp02oekrDet",
+        "outputId": "54f6588c-9a51-47fa-de95-82eb6d5ffd55"
+      },
+      "execution_count": 19,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "62.800000000000004\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "print('Radius is: ', c.radius)\n",
+        "print('Area is: ', c.area)\n",
+        "print('Circumference is: ', c.getCircumference())"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "8WSLavjzrDcT",
+        "outputId": "de78db5c-e64d-4cd1-b907-4c4c58a1d0f1"
+      },
+      "execution_count": 20,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Radius is:  10\n",
+            "Area is:  314.0\n",
+            "Circumference is:  62.800000000000004\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#Changing the radius\n",
+        "c.setRadius(4)\n",
+        "print('radius is: ', c.radius)\n",
+        "print('Area is: ', c.area)\n",
+        "print('Circumference is: ', c.getCircumference())"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "x0HG00InrDaB",
+        "outputId": "c58b9506-0b5a-4869-9fda-46c99e89df39"
+      },
+      "execution_count": 21,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "radius is:  4\n",
+            "Area is:  50.24\n",
+            "Circumference is:  25.12\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#Polymorphism\n",
+        "class HouseStark:\n",
+        "  def __init__(self, sigil):\n",
+        "    self.sigil = sigil\n",
+        "\n",
+        "  def motto(self):\n",
+        "    return \"house stark with sigil \" + self.sigil + \"has the motto 'Winter is Coming'\"\n",
+        "\n",
+        "class HouseTargaryen:\n",
+        "  def __init__(self, sigil):\n",
+        "    self.sigil = sigil\n",
+        "\n",
+        "  def motto(self):\n",
+        "      return \"house targaryen with sigil \" + self.sigil + \"has the motto 'Fire and Blood'\"\n",
+        ""
+      ],
+      "metadata": {
+        "id": "Cfwb2bVbrDXc"
+      },
+      "execution_count": 22,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "arya = HouseStark('direwolf')\n",
+        "danaerys = HouseTargaryen('dragon')\n",
+        "\n",
+        "print(arya.motto())"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "WxF-FK2prDVE",
+        "outputId": "8b7b6542-0980-4a6b-a03a-c8e992778d74"
+      },
+      "execution_count": 23,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "house stark with sigil direwolfhas the motto 'Winter is Coming'\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "print(danaerys.motto())"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "BFN_tTRorDSX",
+        "outputId": "ff1a1437-e84b-43fe-c66c-07c8f7485ddd"
+      },
+      "execution_count": 24,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "house targaryen with sigil dragonhas the motto 'Fire and Blood'\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "for warrior in [arya, danaerys]:\n",
+        "  print(warrior.motto())"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "cEWwOkYSrkPy",
+        "outputId": "4c51dffe-4feb-48ba-a80e-8ced82acd88d"
+      },
+      "execution_count": 25,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "house stark with sigil direwolfhas the motto 'Winter is Coming'\n",
+            "house targaryen with sigil dragonhas the motto 'Fire and Blood'\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "def get_motto(warrior):\n",
+        "  print(warrior.motto())\n",
+        "\n",
+        "get_motto(arya)\n",
+        "get_motto(danaerys)\n",
+        ""
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "bibhdw9urkMW",
+        "outputId": "d50c5ce6-ae5f-4f91-e07b-de4cf70a4701"
+      },
+      "execution_count": 26,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "house stark with sigil direwolfhas the motto 'Winter is Coming'\n",
+            "house targaryen with sigil dragonhas the motto 'Fire and Blood'\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#Try and except\n",
+        "try:\n",
+        "  print(\"good to go\")\n",
+        "  print('sss')\n",
+        "  print('top','class')\n",
+        "except:\n",
+        "  print('yesss')\n",
+        "  print('hahaha')\n",
+        "  print('blabla')\n",
+        "else:\n",
+        "  print(\"t r u e\")\n",
+        "  print(' no matter')\n",
+        "  print('what')"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "2lsnv5ZyrkJ4",
+        "outputId": "f365d9ed-ecb2-472e-8cb8-bf9cc21082df"
+      },
+      "execution_count": 27,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "good to go\n",
+            "sss\n",
+            "top class\n",
+            "t r u e\n",
+            " no matter\n",
+            "what\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#Finally\n",
+        "try:\n",
+        "  print(\"execute try statements\")\n",
+        "except:\n",
+        "  print(\"neverrrr\")\n",
+        "finally:\n",
+        "  print(\"finally always\")\n",
+        ""
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "SXePWwHOrkHN",
+        "outputId": "eb61df3d-ef73-4cc2-f7b9-8789805e4d10"
+      },
+      "execution_count": 28,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "execute try statements\n",
+            "finally always\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#A real world case example\n",
+        "'''\n",
+        "uber price calculation\n",
+        "'''\n",
+        "def get_price_per_km(hour):\n",
+        "\n",
+        "  if (hour>8 & (hour<11)):\n",
+        "    price_per_km = 20\n",
+        "  elif (hour>18 & (hour<21)):\n",
+        "    price_per_km = 25\n",
+        "  else:\n",
+        "    price_per_km = 30\n",
+        "  return price_per_km\n",
+        ""
+      ],
+      "metadata": {
+        "id": "qHryUvRfrkEW"
+      },
+      "execution_count": 29,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "'''\n",
+        "production grade code\n",
+        "'''\n",
+        "class SurgePricing:\n",
+        "    def __init__(self):\n",
+        "        pass\n",
+        "    def get_price_per_km(self, hour):\n",
+        "        try:\n",
+        "            if (hour > 8 and (hour < 11)):\n",
+        "                price_per_km = 20\n",
+        "            elif (hour > 18 and (hour < 21)):\n",
+        "                price_per_km = 25\n",
+        "            else:\n",
+        "                price_per_km = 30\n",
+        "        except:\n",
+        "            price_per_km = 10\n",
+        "        return price_per_km\n",
+        ""
+      ],
+      "metadata": {
+        "id": "F0fKsLHarkBn"
+      },
+      "execution_count": 30,
+      "outputs": []
+    }
+  ]
+}
